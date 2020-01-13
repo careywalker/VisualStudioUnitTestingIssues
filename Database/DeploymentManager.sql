@@ -14,3 +14,4 @@ Post-Deployment Script Template
 :r .\Internal\Tables\ChangeTracker.sql
 :r .\Internal\Tables\Message.sql
 :r .\Internal\StoredProcedures\internal.SelectMessage.sql
+:r .\Internal\StoredProcedures\internal.UpsertMessage.sql

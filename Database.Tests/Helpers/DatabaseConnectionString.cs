@@ -8,7 +8,7 @@ namespace Database.Tests.Helpers
     {
         private static readonly IConfiguration _configuration = InitConfiguration();
 
-        public static string UniqueDatabaseId => Guid.NewGuid().ToString().Replace("-", "_");
+        public static string UniqueDatabaseId { get; } = Guid.NewGuid().ToString().Replace("-", "_");
 
         public static string GetDatabaseConnectionString()
         {
