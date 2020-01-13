@@ -66,8 +66,15 @@
     <None Include="Schemas\Internal.sql" />
     <None Include="Internal\Tables\Message.sql" />
     <None Include="Internal\StoredProcedures\internal.SelectMessage.sql" />
+    <None Include="Internal\StoredProcedures\internal.UpsertMessage.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="DeploymentManager.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <SqlCmdVariable Include="Environment">
+      <DefaultValue>Debug</DefaultValue>
+      <Value>$(SqlCmdVar__1)</Value>
+    </SqlCmdVariable>
   </ItemGroup>
 </Project>
