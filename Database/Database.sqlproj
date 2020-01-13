@@ -56,5 +56,18 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="Schemas" />
+    <Folder Include="Internal" />
+    <Folder Include="Internal\Tables" />
+    <Folder Include="Internal\StoredProcedures" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Internal\Tables\ChangeTracker.sql" />
+    <None Include="Schemas\Internal.sql" />
+    <None Include="Internal\Tables\Message.sql" />
+    <None Include="Internal\StoredProcedures\internal.SelectMessage.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="DeploymentManager.sql" />
   </ItemGroup>
 </Project>
